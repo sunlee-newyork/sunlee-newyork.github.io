@@ -6,16 +6,24 @@ $(window).load(function() {
 	// Fade page into view
 	$("#landing").fadeIn(3000);		
 
-	$(".my-section").on('swipeleft', function () {
-		var section = '#';
-		section += $(this).data('next');
-		$.mobile.changePage(section);
-	});
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		
+		$(".my-section").on('swipeleft', function () {
+			
+			var section = '#';	
+			section += $(this).data('next');			
+			$.mobile.changePage(section);
 
-	$(".my-section-pages").on('swiperight', function() {
-		var page = '#';
-		page += $(this).data('prev');
-		$.mobile.changePage(page, { reverse: true } );
-	});
+		});
+
+		$(".my-section-pages").on('swiperight', function() {
+			
+			var page = '#';	
+			page += $(this).data('prev');
+			$.mobile.changePage(page, { reverse: true } );
+
+		});
+
+	}
 
 });

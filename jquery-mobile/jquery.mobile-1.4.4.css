@@ -932,17 +932,6 @@ html .ui-alt-icon .ui-radio-off:after {
 /* A
 -----------------------------------------------------------------------------------------------------------*/
 /* Bar: Toolbars, dividers, slider track */
-.ui-bar-a,
-.ui-page-theme-a .ui-bar-inherit,
-html .ui-bar-a .ui-bar-inherit,
-html .ui-body-a .ui-bar-inherit,
-html body .ui-group-theme-a .ui-bar-inherit {
-	background-color: 			rgba(0,0,0,1) /*{a-bar-background-color}*/;
-	border-color:	 		#ddd /*{a-bar-border}*/;
-	color: 					rgba(255,255,255,1) /*{a-bar-color}*/;
-
-	font-weight: bold;
-}
 .ui-bar-a {
 	border-width: 1px;
 	border-style: solid;
