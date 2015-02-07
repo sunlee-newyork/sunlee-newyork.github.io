@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>SUN LEE | Developer</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8">
+		
+		<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.4.css" />
+		<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+		<script>
+			// Bind to "mobileinit" before you load jquery.mobile.js
+			// Set the default transition to slide
+			$(document).on( "mobileinit", function() {
+				$.mobile.defaultPageTransition = "slide";
+			});	
+		</script>
+		<script src="jquery-mobile/jquery.mobile-1.4.4.js"></script>
+
+		<!--<script type="text/javascript" src="http://labs.skinkers.com/content/touchSwipe/jquery.touchSwipe.min.js"></script>-->
+
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="index.css">
+
+	</head>
+
+	<body>
+
+		<!-- // MAIN LANDING PAGE \\ -->
+		<div data-role="page" id="landing">
+
+			<!-- Container set for vertical alignment of header/content in one item -->
+			<div class="container">
+
+				<!-- *** HEADER *** -->
+				<div data-role="header" class="my-header">
+					<span class="my-name">SUN LEE</span>
+					<span class="my-position">Fullstack Developer</span>
+					<div class="my-contacts">
+						<a class="my-email" href="mailto:sunlee.newyork@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+						<a class="my-instagram" href="//instagram.com/foodeatyum" target="_blank"><i class="fa fa-instagram"></i></a>
+						<a class="my-linkedin" href="//www.linkedin.com/in/sunleenewyork/" target="_blank"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<!-- *** END HEADER *** -->
+
+				<!-- *** MAIN CONTENT *** -->
+				<div data-role="content" class="my-center">
+					<div class="my-section front" data-next="front">
+						<span class="my-title">FRONT</span>
+						<span class="my-arrow"><a href="#front" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
+					</div>
+					<div class="my-section back" data-next="back">
+						<span class="my-title">BACK</span>
+						<span class="my-arrow"><a href="#back" data-role="button" data-next="back" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
+					</div>
+					<div class="my-section projects" data-next="projects">
+						<span class="my-title">PROJECTS</span>
+						<span class="my-arrow"><a href="#projects" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
+					</div>
+				</div>
+				<!-- *** END MAIN CONTENT *** -->
+
+				<!-- *** FOOTER *** -->
+				<div data-role="footer" class="my-footer">
+					<span>Download resume</span>
+				</div>
+				<!-- *** END FOOTER *** -->
+
+			</div>
+		</div>
+		<!-- // END MAIN LANDING PAGE \\ -->
+
+		<!-- // FRONTEND DEVELOPMENT PAGE \\ -->
+		<div data-role="page" id="front" class="my-section-pages" data-prev="landing">
+			<span>Sup</span>
+		</div>
+
+		<div data-role="page" id="back" class="my-section-pages" data-prev="landing">
+			<span>Sup</span>
+		</div>
+
+		<div data-role="page" id="projects" class="my-section-pages" data-prev="landing">
+			<span>Sup</span>
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="index.js"></script>
+
+</html>
