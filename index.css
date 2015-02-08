@@ -35,7 +35,7 @@ a {
 }
 
 .my-header {
-	margin: 1.5em auto;
+	margin: 0 auto;
 	display: table;
 	text-align: center;
 	padding: 10% 10%;
@@ -59,8 +59,8 @@ a {
 }
 .my-header .my-hat {
 	position: relative;
-	width: 150px;
-	height: 95px;
+	width: 120px;
+	height: 76px;
 	margin: 0 auto;
 	background: url(/assets/imgs/bowler-hat.png) no-repeat 50% 50%;
 	background-size: cover;
@@ -68,39 +68,40 @@ a {
 .my-header .my-name {
 	display: inline-block;
 	border-bottom: 1px solid white;
-	font-size: 3em;
+	font-size: 2.3em;
 	font-weight: 100;
 }
 .my-header .my-title {
 	display: block;
 	margin-top: 0.2em;
-	font-size: 1.3em;
+	font-size: 1em;
 	font-weight: 100;
 }
 .my-header .my-contacts {
 	padding-top: 5px;
+	font-size: 0.7em;
 }
 .my-header .my-contacts a {
 	display: inline-block;
-	font-size: 2em;
+	font-size: 1.6em;
 }
 .my-header .my-contacts a i {
 	color: #ffffff;
 }
 .my-header .my-contacts a.my-instagram i {
-	padding: 0 10px;
+	padding: 0 5px;
 }
 .my-header .my-contacts a.my-linkedin i {
 	font-size: 1.1em;
 }
 .my-header .my-contacts a.my-github i {
-	padding: 0 0 0 10px;
+	padding: 0 0 0 5px;
 }
 .my-header .my-tie {
 	position: relative;
-	width: 80px;
-	height: 45px;
-	margin: 5px auto 0 auto;
+	width: 40px;
+	height: 23px;
+	margin: 5px auto 0;
 	background: url(/assets/imgs/bowtie.png) no-repeat 50% 0;
 	background-size: cover;
 }
@@ -109,14 +110,24 @@ a {
 
 /* - My Center - */
 
+.my-center {
+	overflow-x: visible;
+}
 .my-center .my-section {
-	margin-bottom: 0.3em;
+	height: 50px;
+	margin: 0.15em 0;
 	padding: 0 1.4em;
 	line-height: 2.5em;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 .my-center .my-section span {
+	position: relative;
 	display: inline-block;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 .my-center .my-section.front {
 	background-color: #8000FF;
@@ -133,7 +144,6 @@ a {
 }
 .my-center .my-section .my-arrow {
 	float: right;
-	margin-top: 0.5em;
 	text-shadow: 1px 1px #555;
 }
 #front {
@@ -165,13 +175,49 @@ a {
 
 .ui-content.my-center {
 	padding: 0;
+	overflow-x: visible;
 }
 
 /* - end jQuery Mobile CSS Overrides - */
 
 /* - My Media Queries - */
 
-@media screen and (orientation: landscape) {
+@media (min-width: 350px) {
+	.my-center .my-section {
+		height: 60px;
+	}
+}
+
+@media (min-height: 568px) {
+	.my-header {
+		margin: 1.5em auto;
+	}
+}
+
+@media (min-width: 640px), (min-height: 640px) {
+	.my-header {
+		margin: 1em auto;
+	}
+	.my-header .my-hat {
+		width: 175px;
+		height: 110px;
+	}
+	.my-header .my-name {
+		font-size: 3.5em;
+	}
+	.my-header .my-title {
+		font-size: 1.55em;
+	}
+	.my-header .my-contacts {
+		font-size: 1em;
+	}
+	.my-header .my-tie {
+		width: 57px;
+		height: 32px;
+	}
+}
+
+@media (orientation: landscape) {
 	.container {
 		width: 100%;
 	}
@@ -197,8 +243,8 @@ a {
 	}
 	.my-center .my-section {
 		padding: 0 1.2em;
-		border-top-left-radius: 2em;
-		border-bottom-left-radius: 2em;
+		border-top-left-radius: 4em;
+		border-bottom-left-radius: 4em;
 	}
 	.my-center .my-section .my-arrow {
 		margin-left: 2em;
@@ -208,16 +254,44 @@ a {
 	}
 }
 
+@media (min-width: 768px) {
+	.my-header .my-hat {
+		width: 190px;
+		height: 120px;
+	}
+	.my-header .my-name {
+		font-size: 4em;
+	}
+	.my-header .my-title {
+		font-size: 1.8em;
+	}
+	.my-header .my-contacts {
+		font-size: 1.5em;
+	}
+	.my-center .my-section {
+		height: 85px;
+	}
+}
+
 @media (min-width: 768px) and (orientation: landscape) {
+	.my-header-container {
+		width: 70%;
+		margin: 0 auto;
+		-webkit-transition: width: 1s;
+		-moz-transition: width: 1s;
+		-ms-transition: width: 1s;
+		transition: width: 1s;
+	}
 	.my-header .my-tie {
 		width: 50px;
-		height: 140px;
+		height: 150px;
+		margin: 10px auto 0;
 		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
 		background-size: cover;
 	}
 	.my-center .my-section {
 		float: right;
-		width: 83%;
+		width: 95%;	
 		opacity: 0.8;
 		-webkit-transition: width 0.5s, opacity 0.3s;
 		-moz-transition: width 0.5s, opacity 0.3s;
@@ -225,7 +299,7 @@ a {
 		transition: width 0.5s, opacity 0.3s;
 	}
 	.my-center .my-section:hover {
-		width: 87%;
+		width: 100%;
 		opacity: 1;
 	}
 	.my-center .my-section .my-arrow {
@@ -247,6 +321,10 @@ a {
 	.my-center .my-section.projects:hover .my-arrow {
 		background-color: #FFFF33;
 	}
+}
+
+@media (min-width: 1000px) and (orientation: landscape) {
+
 }
 
 /* - end My Media Queries - */
