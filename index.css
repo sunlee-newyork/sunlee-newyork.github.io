@@ -67,10 +67,10 @@ a {
 }
 .my-header .my-tie {
 	position: relative;
-	width: 50px;
-	height: 140px;
+	width: 80px;
+	height: 45px;
 	margin: 5px auto 0 auto;
-	background: url(/assets/imgs/tie.png) no-repeat 50% 0;
+	background: url(/assets/imgs/bowtie.png) no-repeat 50% 0;
 	background-size: cover;
 }
 
@@ -156,6 +156,11 @@ a {
 		width: 50%;
 		margin: 0;
 		padding: 0;
+	}
+	.my-header .my-tie {
+		width: 50px;
+		height: 140px;
+		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
 	}
 	.my-center {
 		position: relative;
