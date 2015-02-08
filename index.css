@@ -20,11 +20,42 @@ a {
 
 /* - My Header - */
 
+@-webkit-keyframes tieAdjust {
+	0% { -webkit-transform: rotate(5deg); }
+	10% { -webkit-transform: rotate(3deg); }
+	20% { -webkit-transform: rotate(0deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(-3deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(-5deg); }
+	50% { -webkit-transform: translate(2px, 1px) rotate(-2deg); }
+	60% { -webkit-transform: translate(1px, 0px) rotate(0deg); }
+	70% { -webkit-transform: translate(0px, 0px) rotate(2deg); }
+	80% { -webkit-transform: rotate(3deg); }
+	90% { -webkit-transform: rotate(1deg); }
+	100% { -webkit-transform: rotate(0deg); }
+}
+
 .my-header {
 	margin: 1.5em auto;
 	display: table;
 	text-align: center;
 	padding: 10% 10%;
+	-webkit-transition: transform 1s;
+	-moz-transition: transform 1s;
+	-ms-transition: transform 1s;
+	transition: transform 1s;
+}
+.my-header:hover .my-hat{
+	-webkit-transform: rotate(-7deg);
+	-moz-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+.my-header:hover .my-tie {
+	-webkit-animation-name: tieAdjust;
+	-webkit-animation-duration: 0.5s;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-iteration-count: 2s;
+	-webkit-animation-timing-function: linear;
 }
 .my-header .my-hat {
 	position: relative;
@@ -79,10 +110,9 @@ a {
 /* - My Center - */
 
 .my-center .my-section {
-	height: 2.5em;
-	line-height: 2.5em;
 	margin-bottom: 0.3em;
 	padding: 0 1.4em;
+	line-height: 2.5em;
 	font-size: 1.5em;
 }
 .my-center .my-section span {
@@ -149,6 +179,9 @@ a {
 	.my-header {
 		position: absolute;
 		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
 	.my-header {
@@ -175,12 +208,44 @@ a {
 	}
 }
 
-@media (min-width : 768px) {
+@media (min-width: 768px) and (orientation: landscape) {
 	.my-header .my-tie {
 		width: 50px;
 		height: 140px;
 		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
 		background-size: cover;
+	}
+	.my-center .my-section {
+		float: right;
+		width: 83%;
+		opacity: 0.8;
+		-webkit-transition: width 0.5s, opacity 0.3s;
+		-moz-transition: width 0.5s, opacity 0.3s;
+		-ms-transition: width 0.5s, opacity 0.3s;
+		transition: width 0.5s, opacity 0.3s;
+	}
+	.my-center .my-section:hover {
+		width: 87%;
+		opacity: 1;
+	}
+	.my-center .my-section .my-arrow {
+		-webkit-border-radius: .3125em;
+		-moz-border-radius: .3125em;
+		-ms-border-radius: .3125em;
+		border-radius: .3125em;
+		-webkit-transition: background-color 0.2s;
+		-moz-transition: background-color 0.2s;
+		-ms-transition: background-color 0.2s;
+		transition: background-color 0.2s;
+	}
+	.my-center .my-section.front:hover .my-arrow {
+		background-color: #80FFFF;
+	}
+	.my-center .my-section.back:hover .my-arrow {
+		background-color: #FF80FF;
+	}
+	.my-center .my-section.projects:hover .my-arrow {
+		background-color: #FFFF33;
 	}
 }
 
