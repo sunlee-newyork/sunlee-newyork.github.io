@@ -145,6 +145,10 @@ a {
 .my-center .my-section .my-arrow {
 	float: right;
 	text-shadow: 1px 1px #555;
+	-webkit-border-radius: .2em;
+	-moz-border-radius: .2em;
+	-ms-border-radius: .2em;
+	border-radius: .2em;
 }
 #front {
 	background-color: #8000FF;
@@ -304,10 +308,6 @@ a {
 		opacity: 1;
 	}
 	.my-center .my-section .my-arrow {
-		-webkit-border-radius: .3125em;
-		-moz-border-radius: .3125em;
-		-ms-border-radius: .3125em;
-		border-radius: .3125em;
 		-webkit-transition: background-color 0.2s;
 		-moz-transition: background-color 0.2s;
 		-ms-transition: background-color 0.2s;
