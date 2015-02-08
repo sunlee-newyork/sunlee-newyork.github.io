@@ -157,11 +157,6 @@ a {
 		margin: 0;
 		padding: 0;
 	}
-	.my-header .my-tie {
-		width: 50px;
-		height: 140px;
-		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
-	}
 	.my-center {
 		position: relative;
 		float: right;
@@ -180,10 +175,13 @@ a {
 	}
 }
 
-@media only screen and (min-width : 768px) {
-	
-
-	
+@media (min-width : 768px) {
+	.my-header .my-tie {
+		width: 50px;
+		height: 140px;
+		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
+		background-size: cover;
+	}
 }
 
 /* - end My Media Queries - */
