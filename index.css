@@ -5,15 +5,20 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 	color: #fff !important;
 	height: 101%;
 }
-
 a {
 	text-decoration: none;
 	color: #fff;
 }
 
+/* - My Globals - */
+
 #landing {
 	display: none;
 }
+
+/* - end My Globals - */
+
+/* - My Header - */
 
 .my-header {
 	margin: 1.5em auto;
@@ -21,40 +26,56 @@ a {
 	text-align: center;
 	padding: 10% 10%;
 }
-
+.my-header .my-hat {
+	position: relative;
+	width: 150px;
+	height: 95px;
+	margin: 0 auto;
+	background: url(/assets/imgs/bowler-hat.png) no-repeat 50% 50%;
+	background-size: cover;
+}
 .my-header .my-name {
 	display: inline-block;
 	border-bottom: 0.1em solid white;
 	font-size: 3em;
 	font-weight: 100;
 }
-
-.my-header .my-position {
+.my-header .my-title {
 	display: block;
 	margin-top: 0.2em;
 	font-size: 1.15em;
 }
-
 .my-header .my-contacts {
 	padding-top: 0.5em;
 }
-
 .my-header .my-contacts a {
 	display: inline-block;
 	font-size: 2em;
 }
-
 .my-header .my-contacts a i {
 	color: #ffffff;
 }
-
 .my-header .my-contacts a.my-instagram i {
 	padding: 0 10px;
 }
-
 .my-header .my-contacts a.my-linkedin i {
 	font-size: 1.1em;
 }
+.my-header .my-contacts a.my-github i {
+	padding: 0 0 0 10px;
+}
+.my-header .my-tie {
+	position: relative;
+	width: 50px;
+	height: 140px;
+	margin: 5px auto 0 auto;
+	background: url(/assets/imgs/tie.png) no-repeat 50% 0;
+	background-size: cover;
+}
+
+/* - end My Header - */
+
+/* - My Center - */
 
 .my-center .my-section {
 	height: 2.5em;
@@ -63,97 +84,91 @@ a {
 	padding: 0 1.4em;
 	font-size: 1.5em;
 }
-
 .my-center .my-section span {
 	display: inline-block;
 }
-
 .my-center .my-section.front {
 	background-color: #8000FF;
 }
-
 .my-center .my-section.back {
 	background-color: #0080FF;
 }
-
 .my-center .my-section.projects {
 	background-color: #FF0080;
 }
-
 .my-center .my-section .title {
 	float: left;
 	letter-spacing: 2px;
 }
-
 .my-center .my-section .my-arrow {
 	float: right;
 	margin-top: 0.5em;
 	text-shadow: 1px 1px #555;
 }
+#front {
+	background-color: #8000FF;
+}
+#back {
+	background-color: #0080FF;
+}
+#projects {
+	background-color: #FF0080;
+}
+
+/* - end My Center - */
+
+/* - My Footer - */
 
 .my-footer {
 	display: none;
 }
-
 .my-section-pages {
 	color: #fff;
 	text-align: center;
 	line-height: 100%;
 }
 
-#front {
-	background-color: #8000FF;
-}
+/* - end My Footer - */
 
-#back {
-	background-color: #0080FF;
-}
+/* - jQuery Mobile CSS Overrides - */
 
-#projects {
-	background-color: #FF0080;
-}
-
-
-/* jQuery Mobile CSS Overrides */
 .ui-content.my-center {
 	padding: 0;
 }
+
+/* - end jQuery Mobile CSS Overrides - */
+
+/* - My Media Queries - */
 
 @media screen and (orientation: landscape) {
 	.container {
 		width: 100%;
 	}
-
 	.container,
 	.my-header {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 	}
-
 	.my-header {
 		float: left;
 		width: 50%;
 		margin: 0;
 		padding: 0;
 	}
-
 	.my-center {
 		position: relative;
 		float: right;
 		width: 50%;
 	}
-
 	.my-center .my-section {
 		padding: 0 1.2em;
 		border-top-left-radius: 2em;
 		border-bottom-left-radius: 2em;
 	}
-
 	.my-center .my-section .my-arrow {
 		margin-left: 2em;
 	}
-
 	.my-footer {
 		display: none;
 	}
@@ -164,3 +179,5 @@ a {
 
 	
 }
+
+/* - end My Media Queries - */
