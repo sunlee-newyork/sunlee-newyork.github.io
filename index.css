@@ -117,7 +117,7 @@ a {
 	height: 50px;
 	margin: 0.15em 0;
 	padding: 0 1.4em;
-	line-height: 2.5em;
+	line-height: 1em;
 	font-size: 1.2em;
 }
 .my-center .my-section span {
@@ -270,13 +270,14 @@ a {
 	}
 	.my-center .my-section {
 		height: 85px;
+		font-size: 2em;
 	}
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
 	.my-header-container {
 		width: 70%;
-		margin: 0 auto;
+		margin: 0 0 0 20%;
 		-webkit-transition: width: 1s;
 		-moz-transition: width: 1s;
 		-ms-transition: width: 1s;
@@ -291,7 +292,7 @@ a {
 	}
 	.my-center .my-section {
 		float: right;
-		width: 95%;	
+		width: 80%;	
 		opacity: 0.8;
 		-webkit-transition: width 0.5s, opacity 0.3s;
 		-moz-transition: width 0.5s, opacity 0.3s;
@@ -299,7 +300,7 @@ a {
 		transition: width 0.5s, opacity 0.3s;
 	}
 	.my-center .my-section:hover {
-		width: 100%;
+		width: 90%;
 		opacity: 1;
 	}
 	.my-center .my-section .my-arrow {
