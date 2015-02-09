@@ -1,9 +1,39 @@
+/* - Fonts - */
+
+@font-face {
+	font-family: 'QuicksandRegular';
+	src: url('/assets/fonts/quicksand/Quicksand-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'QuicksandLight';
+	src: url('/assets/fonts/quicksand/Quicksand-Light.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'QuicksandBold';
+	src: url('/assets/fonts/quicksand/Quicksand-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'CaviarDreams';
+	src: url('/assets/fonts/caviardreams/CaviarDreams.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CaviarDreamsBold';
+	src: url('/assets/fonts/caviardreams/CaviarDreams_Bold.ttf') format('truetype');
+}
+
+/* - end Fonts - */
+
 body.ui-mobile-viewport, div.ui-mobile-viewport {
 	margin: 0;
 	background-color: #000 !important;
 	font-family: Tahoma, Arial, sans-serif;
 	color: #fff !important;
 	height: 101%;
+	line-height: 1.2;
 }
 a {
 	text-decoration: none;
@@ -68,14 +98,14 @@ a {
 .my-header .my-name {
 	display: inline-block;
 	border-bottom: 1px solid white;
-	font-size: 2.3em;
-	font-weight: 100;
+	font-size: 3em;
+	font-family: 'CaviarDreams';
 }
 .my-header .my-title {
 	display: block;
 	margin-top: 0.2em;
-	font-size: 1em;
-	font-weight: 100;
+	font-size: 0.95em;
+	font-family: 'QuicksandLight';
 }
 .my-header .my-contacts {
 	padding-top: 5px;
@@ -101,7 +131,7 @@ a {
 	position: relative;
 	width: 40px;
 	height: 23px;
-	margin: 5px auto 0;
+	margin: 10px auto 0;
 	background: url(/assets/imgs/bowtie.png) no-repeat 50% 0;
 	background-size: cover;
 }
@@ -119,6 +149,7 @@ a {
 	padding: 0 1.4em;
 	line-height: 1em;
 	font-size: 1.2em;
+	font-family: 'QuicksandRegular';
 }
 .my-center .my-section span {
 	position: relative;
@@ -129,12 +160,15 @@ a {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
+#front,
 .my-center .my-section.front {
 	background-color: #8000FF;
 }
+#back,
 .my-center .my-section.back {
 	background-color: #0080FF;
 }
+#projects,
 .my-center .my-section.projects {
 	background-color: #FF0080;
 }
@@ -145,19 +179,19 @@ a {
 .my-center .my-section .my-arrow {
 	float: right;
 	text-shadow: 1px 1px #555;
-	-webkit-border-radius: .2em;
-	-moz-border-radius: .2em;
-	-ms-border-radius: .2em;
-	border-radius: .2em;
+	-webkit-border-radius: .3125em;
+	-moz-border-radius: .3125em;
+	-ms-border-radius: .3125em;
+	border-radius: .3125em;
 }
-#front {
-	background-color: #8000FF;
+.my-center .my-section.front .my-arrow {
+	background-color: #80FFFF;
 }
-#back {
-	background-color: #0080FF;
+.my-center .my-section.back .my-arrow {
+	background-color: #FF80FF;
 }
-#projects {
-	background-color: #FF0080;
+.my-center .my-section.projects .my-arrow {
+	background-color: #FFFF33;
 }
 
 /* - end My Center - */
@@ -186,7 +220,7 @@ a {
 
 /* - My Media Queries - */
 
-@media (min-width: 350px) {
+@media (min-width: 569px), (min-height: 568px) {
 	.my-center .my-section {
 		height: 60px;
 	}
@@ -207,10 +241,10 @@ a {
 		height: 110px;
 	}
 	.my-header .my-name {
-		font-size: 3.5em;
+		font-size: 4em;
 	}
 	.my-header .my-title {
-		font-size: 1.55em;
+		font-size: 1.25em;
 	}
 	.my-header .my-contacts {
 		font-size: 1em;
@@ -264,10 +298,10 @@ a {
 		height: 120px;
 	}
 	.my-header .my-name {
-		font-size: 4em;
+		font-size: 5em;
 	}
 	.my-header .my-title {
-		font-size: 1.8em;
+		font-size: 1.6em;
 	}
 	.my-header .my-contacts {
 		font-size: 1.5em;
@@ -276,9 +310,25 @@ a {
 		height: 85px;
 		font-size: 2em;
 	}
+	.my-center .my-section .my-arrow a {
+		-webkit-border-radius: .5em;
+		-moz-border-radius: .5em;
+		-ms-border-radius: .5em;
+		border-radius: .5em;
+	}
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
+	.my-header .my-tie {
+		width: 50px;
+		height: 150px;
+		margin: 10px auto 0;
+		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
+		background-size: cover;
+	}
+}
+
+@media (min-width: 1025px) {
 	.my-header-container {
 		width: 70%;
 		margin: 0 0 0 20%;
@@ -287,13 +337,7 @@ a {
 		-ms-transition: width: 1s;
 		transition: width: 1s;
 	}
-	.my-header .my-tie {
-		width: 50px;
-		height: 150px;
-		margin: 10px auto 0;
-		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
-		background-size: cover;
-	}
+
 	.my-center .my-section {
 		float: right;
 		width: 80%;	
@@ -306,6 +350,7 @@ a {
 	.my-center .my-section:hover {
 		width: 90%;
 		opacity: 1;
+		cursor: pointer;
 	}
 	.my-center .my-section .my-arrow {
 		-webkit-transition: background-color 0.2s;
@@ -322,10 +367,6 @@ a {
 	.my-center .my-section.projects:hover .my-arrow {
 		background-color: #FFFF33;
 	}
-}
-
-@media (min-width: 1000px) and (orientation: landscape) {
-
 }
 
 /* - end My Media Queries - */
