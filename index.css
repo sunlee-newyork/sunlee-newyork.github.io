@@ -221,18 +221,6 @@ a {
 /* - My Media Queries - */
 
 @media (min-width: 569px), (min-height: 568px) {
-	.my-center .my-section {
-		height: 60px;
-	}
-}
-
-@media (min-height: 568px) {
-	.my-header {
-		margin: 1.5em auto;
-	}
-}
-
-@media (min-width: 640px), (min-height: 640px) {
 	.my-header {
 		margin: 2em auto;
 	}
@@ -252,6 +240,9 @@ a {
 	.my-header .my-tie {
 		width: 57px;
 		height: 32px;
+	}
+	.my-center .my-section {
+		height: 60px;
 	}
 }
 
@@ -322,7 +313,7 @@ a {
 	.my-header .my-tie {
 		width: 50px;
 		height: 150px;
-		margin: 10px auto 0;
+		margin: 20px auto 0;
 		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
 		background-size: cover;
 	}
@@ -332,10 +323,6 @@ a {
 	.my-header-container {
 		width: 70%;
 		margin: 0 0 0 20%;
-		-webkit-transition: width: 1s;
-		-moz-transition: width: 1s;
-		-ms-transition: width: 1s;
-		transition: width: 1s;
 	}
 
 	.my-center .my-section {
