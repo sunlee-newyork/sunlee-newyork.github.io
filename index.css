@@ -219,12 +219,8 @@ a {
 /* - end jQuery Mobile CSS Overrides - */
 
 /* - My Media Queries - */
-@media screen and (min-width: 568px), (min-height: 568px) {
-	.my-header {
-		margin: 2em auto;
-	}
-}
-@media screen and (min-width: 569px), (min-height: 569px) {
+
+@media screen and (min-width: 500px), (min-height: 500px) {
 	.my-header .my-hat {
 		width: 175px;
 		height: 110px;
@@ -244,6 +240,12 @@ a {
 	}
 	.my-center .my-section {
 		height: 60px;
+	}
+}
+
+@media screen and (min-width: 595px), (min-height: 595px) {
+	.my-header {
+		margin: 2em auto;
 	}
 }
 
