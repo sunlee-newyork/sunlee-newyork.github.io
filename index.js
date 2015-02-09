@@ -3,6 +3,9 @@ $(window).load(function() {
 	// jQuery Loading div that appears at the footer of page
 	$.mobile.loading().hide();
 
+	// Get rid of browser nav (hacky)
+	$('body').scrollTop($(this)[0].scrollHeight);
+
 	// Fade page into view
 	$("#landing").fadeIn(3000);		
 

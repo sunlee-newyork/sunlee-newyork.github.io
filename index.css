@@ -32,7 +32,7 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 	background-color: #000 !important;
 	font-family: Tahoma, Arial, sans-serif;
 	color: #fff !important;
-	height: 101%;
+	height: 101% !important;
 	line-height: 1.2;
 }
 a {
