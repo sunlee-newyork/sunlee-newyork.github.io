@@ -1,7 +1,7 @@
 $(window).load(function() {
 
 	// jQuery Loading div that appears at the footer of page
-	$.mobile.loading().hide();
+	// $.mobile.loading().hide();
 
 	// Fade page into view
 	$("#landing").fadeIn(3000);		

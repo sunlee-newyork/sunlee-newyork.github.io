@@ -1,0 +1,22 @@
+{
+  "name": "sunlee-newyork.github.io",
+  "main": "index.html",
+  "version": "1.0",
+  "homepage": "https://github.com/sunlee-newyork/sunlee-newyork.github.io",
+  "authors": [
+    "Sun Lee"
+  ],
+  "description": "My site",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.13"
+  }
+}

@@ -25,6 +25,32 @@
 	src: url('/assets/fonts/caviardreams/CaviarDreams_Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'CodeProRegular';
+    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot');
+    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff2') format('woff2'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.svg#code_pro_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CodeProLight';
+    src: url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.eot');
+    src: url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.woff2') format('woff2'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.woff') format('woff'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.ttf') format('truetype'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.svg#code_pro_light_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* - end Fonts - */
 
 body.ui-mobile-viewport, div.ui-mobile-viewport {
@@ -32,7 +58,7 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 	background-color: #000 !important;
 	font-family: Tahoma, Arial, sans-serif;
 	color: #fff !important;
-	height: 101% !important;
+	height: 100% !important;
 	line-height: 1.2;
 }
 a {
@@ -201,13 +227,47 @@ a {
 .my-footer {
 	display: none;
 }
-.my-section-pages {
-	color: #fff;
-	text-align: center;
-	line-height: 100%;
-}
 
 /* - end My Footer - */
+
+/* - Search Page - */
+
+.my-section-pages {
+	line-height: 100%;
+	text-align: center;
+	font-family: 'CodeProRegular';
+	font-size: 2em;
+	color: #fff;
+	transition: color 1s;
+}
+
+.my-section-pages .container {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.my-section-pages .ui-input-text {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.my-section-pages .search-result {
+	opacity: 0;
+	padding-top: 10px;
+	font-family: 'CodeProLight';
+	-webkit-transition: height 2s ease-in-out;
+	-moz-transition: height 2s ease-in-out;
+	-ms-transition: height 2s ease-in-out;
+	transition: height 2s ease-in-out;
+}
+
+/* - end Search Page - */
 
 /* - jQuery Mobile CSS Overrides - */
 
