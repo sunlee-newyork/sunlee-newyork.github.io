@@ -11,10 +11,10 @@
 		<link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="index.css">
 
-		<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.4.css" />
+		<link rel="stylesheet" href="bower_components/jquery-mobile/jquery.mobile-1.4.4.css" />
 	</head>
 
-	<body>
+	<body ng-app="myApp">
 
 		<!-- // MAIN LANDING PAGE \\ -->
 		<div data-role="page" id="landing">
@@ -65,22 +65,35 @@
 		</div>
 		<!-- // END MAIN LANDING PAGE \\ -->
 
-		<!-- // FRONTEND DEVELOPMENT PAGE \\ -->
-		<div data-role="page" id="front" class="my-section-pages" data-prev="landing">
-			<span>Sup</span>
+		<!-- // SEARCH PAGE \\ -->
+		<div data-role="page" id="front" class="my-section-pages" data-prev="landing" ng-controller="searchEngine">
+			<div class="container searchpage">
+				<h2>Search my:</h2><span>{{searchOptions}}</span>
+				<input type="text" placeholder="search here" ng-model="searchInput" ng-enter="showResult(searchInput)" />
+				<div class="search-result" id="result"><span>{{searchResult}}</span></div>
+			</div>
 		</div>
+		<!-- // END SEARCH PAGE \\ -->
 
+		<!-- //  \\ -->
 		<div data-role="page" id="back" class="my-section-pages" data-prev="landing">
-			<span>Sup</span>
+			<div class="container">
+				<h2>Sup</h2>
+			</div>
 		</div>
+		<!-- // END  \\ -->
 
+		<!-- //  \\ -->
 		<div data-role="page" id="projects" class="my-section-pages" data-prev="landing">
-			<span>Sup</span>
+			<div class="container">
+				<h2>Sup</h2>
+			</div>
 		</div>
+		<!-- // END \\ -->
 
 	</body>
 
-	<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+	<script src="bower_components/jquery-mobile/jquery-1.11.1.min.js"></script>
 	<script>
 		// Bind to "mobileinit" before you load jquery.mobile.js
 		// Set the default transition to slide
@@ -88,7 +101,10 @@
 			$.mobile.defaultPageTransition = "slide";
 		});	
 	</script>
-	<script src="jquery-mobile/jquery.mobile-1.4.4.js"></script>
-	<script type="text/javascript" src="index.js"></script>
+	<script src="bower_components/jquery-mobile/jquery.mobile-1.4.4.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+
+	<script src="index.js"></script>
+	<script src="app/app.js"></script>
 
 </html>
