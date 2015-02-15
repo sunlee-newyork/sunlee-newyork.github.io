@@ -35,13 +35,21 @@ app.controller('searchEngine', ['$scope', function ($scope) {
 		location: "Brooklyn, NY",
 		number: "(917) 485-8278",
 		facebook: "facebook.com/sunlee1988",
-		instagram: "instagram.com/foodeatyum/"
+		instagram: "instagram.com/foodeatyum/",
+		job: "Integration Engineer @Olapic",
+		position: "Integration Engineer @Olapic",
+		work: "Olapic",
+		workplace: "Olapic",
+		company: "Olapic",
+		resume: "Coming soon!",
+		portfolio: "Coming soon!",
+		projects: "Comming soon!"
 	}
 	$scope.showResult = function (input) {
 		angular.forEach($scope.info, function (value, index) {
 			if (input == index) {
 				$scope.searchResult = value;	
-			} //else { $scope.searchResult = "No results"; }
+			}
 		});
 		var result = angular.element('#result');
 		result.css('height', '150px');
