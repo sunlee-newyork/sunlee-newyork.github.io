@@ -68,9 +68,9 @@
 		<!-- // SEARCH PAGE \\ -->
 		<div data-role="page" id="front" class="my-section-pages" data-prev="landing" ng-controller="searchEngine">
 			<div class="container searchpage">
-				<h2>Search my:</h2><span>{{searchOptions}}</span>
-				<input type="text" placeholder="search here" ng-model="searchInput" ng-enter="showResult(searchInput)" />
-				<div class="search-result" id="result"><span>{{searchResult}}</span></div>
+				<h2>Find my:</h2><span>{{searchOptions}}</span>
+				<input type="text" placeholder="...info	" ng-model="searchInput" ng-enter="showResult(searchInput)" />
+				<div class="search-result" id="result"><p>{{searchResult}}</p></div>
 			</div>
 		</div>
 		<!-- // END SEARCH PAGE \\ -->
