@@ -233,6 +233,7 @@ a {
 /* - Search Page - */
 
 .my-section-pages {
+	height: 100%;
 	line-height: 100%;
 	text-align: center;
 	font-family: 'CodeProRegular';
