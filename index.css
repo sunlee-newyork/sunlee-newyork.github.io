@@ -233,6 +233,7 @@ a {
 /* - Search Page - */
 
 .my-section-pages {
+	height: 100%;
 	line-height: 100%;
 	text-align: center;
 	font-family: 'CodeProRegular';
@@ -258,13 +259,18 @@ a {
 }
 
 .my-section-pages .search-result {
+	height: 0;
 	opacity: 0;
-	padding-top: 10px;
+	padding: 20px 50px;
 	font-family: 'CodeProLight';
-	-webkit-transition: height 2s ease-in-out;
-	-moz-transition: height 2s ease-in-out;
-	-ms-transition: height 2s ease-in-out;
-	transition: height 2s ease-in-out;
+	-webkit-transition: opacity .5s, height .5s ease-in-out;
+	-moz-transition: opacity .5s, height .5s ease-in-out;
+	-ms-transition: opacity .5s, height .5s ease-in-out;
+	transition: opacity .5s, height .5s ease-in-out;
+}
+
+.my-section-pages .search-result p {
+	overflow-wrap: break-word;
 }
 
 /* - end Search Page - */

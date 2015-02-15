@@ -30,16 +30,21 @@ app.controller('searchEngine', ['$scope', function ($scope) {
 		name: "Sun Lee",
 		education: "Stony Brook University - B.A. Linguistics",
 		email: "sunlee.newyork@gmail.com",
-		github: "github.com/sunlee-newyork"
+		github: "github.com/sunlee-newyork",
+		linkedin: "linkedin.com/in/sunleenewyork/",
+		location: "Brooklyn, NY",
+		number: "(917) 485-8278",
+		facebook: "facebook.com/sunlee1988",
+		instagram: "instagram.com/foodeatyum/"
 	}
-	$scope.showResult = function (searchInput) {
+	$scope.showResult = function (input) {
 		angular.forEach($scope.info, function (value, index) {
-			if (searchInput == index) {
+			if (input == index) {
 				$scope.searchResult = value;	
-			}
+			} //else { $scope.searchResult = "No results"; }
 		});
 		var result = angular.element('#result');
-		result.css('height', '200px');
+		result.css('height', '150px');
 		result.css('opacity', '1');
 	}
 }]);
