@@ -259,17 +259,20 @@ a {
 }
 
 .my-section-pages .search-result {
+	width: 90%;
 	height: 0;
 	opacity: 0;
-	padding: 20px 50px;
+	margin: 50px auto 0;
 	font-family: 'CodeProLight';
-	-webkit-transition: opacity .5s, height .5s ease-in-out;
-	-moz-transition: opacity .5s, height .5s ease-in-out;
-	-ms-transition: opacity .5s, height .5s ease-in-out;
-	transition: opacity .5s, height .5s ease-in-out;
+	font-weight: 600;
+	-webkit-transition: opacity 1.5s, min-height .5s ease-in-out;
+	-moz-transition: opacity 1.5s, min-height .5s ease-in-out;
+	-ms-transition: opacity 1.5s, min-height .5s ease-in-out;
+	transition: opacity 1.5s, min-height .5s ease-in-out;
 }
 
 .my-section-pages .search-result p {
+	padding: 0 20px;
 	overflow-wrap: break-word;
 }
 
@@ -422,6 +425,10 @@ a {
 	}
 	.my-center .my-section.projects:hover .my-arrow {
 		background-color: #FFFF33;
+	}
+	/*.my-section-pages .search-result,*/
+	.my-section-pages .ui-input-text {
+		width: 50%;
 	}
 }
 
