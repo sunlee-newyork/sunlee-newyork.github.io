@@ -278,6 +278,23 @@ a {
 
 /* - end Search Page - */
 
+/* - Shake Directive - */
+
+@keyframes shake {
+  0% {transform: translateX(0);}
+  12.5% {transform: translateX(-6px) rotateY(-5deg)}
+  37.5% {transform: translateX(5px) rotateY(4deg)}
+  62.5% {transform: translateX(-3px) rotateY(-2deg)}
+  87.5% {transform: translateX(2px) rotateY(1deg)}
+  100% {transform: translateX(0)}
+}
+
+.shake {
+  animation: shake 400ms ease-in-out;
+}
+
+/* - end Shake Directive - */
+
 /* - jQuery Mobile CSS Overrides - */
 
 .ui-content.my-center {
@@ -396,7 +413,6 @@ a {
 		width: 70%;
 		margin: 0 0 0 20%;
 	}
-
 	.my-center .my-section {
 		float: right;
 		width: 80%;	
@@ -426,7 +442,6 @@ a {
 	.my-center .my-section.projects:hover .my-arrow {
 		background-color: #FFFF33;
 	}
-	/*.my-section-pages .search-result,*/
 	.my-section-pages .ui-input-text {
 		width: 50%;
 	}

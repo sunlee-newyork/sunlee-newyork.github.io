@@ -1,8 +1,13 @@
 'use strict';
 
-var app = angular.module('myApp', ['ngSanitize']);
+angular
 
-app.directive('ngEnter', function () {
+.module('myApp', [
+	'ngSanitize',
+	'ngAnimate'
+])
+
+.directive('ngEnter', function () {
     return function (scope, element, attrs) {
         element.bind("keydown keypress", function (event) {
             if (event.which === 13) {
@@ -14,9 +19,9 @@ app.directive('ngEnter', function () {
             }
         });
     };
-});
+})
 
-app.controller('searchEngine', ['$scope', function ($scope) {
+.controller('searchEngine', ['$scope', function ($scope) {
 	$scope.info = {
 		name: "Sun Lee",
 		education: "Stony Brook University - B.A. Linguistics",
@@ -32,22 +37,27 @@ app.controller('searchEngine', ['$scope', function ($scope) {
 		workplace: "Olapic",
 		company: "Olapic",
 		resume: "Coming soon!",
-		portfolio: "Coming soon!",
-		projects: "Coming soon!",
+		portfolio: "Coming soon",
+		projects: "Coming soon",
 		age: "Nice try!",
 		contact: "sunlee.newyork@gmail.com"
 	}
 
-	$scope.showResult = function (input) {
+	$scope.showResult = function (input) {		
+		var found = 0;
 		var result = angular.element('#result');
-		result.css('height', '0');
-		result.css('opacity', '0');
 		angular.forEach($scope.info, function (value, index) {
 			if (input == index) {
 				$scope.searchResult = value;	
-			}
+				found = 1;
+				result.css('min-height', '200px');
+				result.css('opacity', '1');
+			} 
 		});
-		result.css('min-height', '200px');
-		result.css('opacity', '1');
+		if (found == 0) {
+			$scope.searchResult = "No results";
+			result.css('min-height', '200px');
+			result.css('opacity', '1');
+		}
 	}
 }]);
