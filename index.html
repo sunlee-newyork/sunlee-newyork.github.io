@@ -5,100 +5,47 @@
 	<head>
 		<title>SUN LEE | Developer</title>
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
 		<meta charset="UTF-8">
-		
-		<link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="index.css">
 
-		<link rel="stylesheet" href="bower_components/jquery-mobile/jquery.mobile-1.4.4.css" />
+		<link rel="stylesheet" href="/bower_components/angular-snap/angular-snap.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="/index.css">
+		
+		<base href="/">
 	</head>
 
 	<body ng-app="myApp">
 
-		<!-- // MAIN LANDING PAGE \\ -->
-		<div data-role="page" id="landing">
-
-			<!-- Container set for vertical alignment of header/content in one item -->
-			<div class="container">
-
-				<!-- *** HEADER *** -->
-				<div data-role="header" class="my-header">
-					<div class="my-header-container">
-						<div class="my-hat"></div>
-						<span class="my-name">sun lee</span>
-						<span class="my-title">Fullstack Developer</span>					
-						<div class="my-tie"></div>
-					</div>
-				</div>
-				<!-- *** END HEADER *** -->
-
-				<!-- *** MAIN CONTENT *** -->
-				<div data-role="content" class="my-center">
-					<div class="my-section search" data-next="search">
-						<span class="my-title">search</span>
-						<span class="my-arrow"><a href="#search" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
-					</div>
-					<div class="my-section stimuli" data-next="stimuli">
-						<span class="my-title">stimuli</span>
-						<span class="my-arrow"><a href="#stimuli" data-role="button" data-next="stimuli" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
-					</div>
-					<div class="my-section sides" data-next="sides">
-						<span class="my-title">sides</span>
-						<span class="my-arrow"><a href="#sides" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
-					</div>
-				</div>
-				<!-- *** END MAIN CONTENT *** -->
-
+		<div class="snap-drawers" snap-drawers>
+			<div class="snap-drawer" snap-drawer="left">
+				<a class="nav-home" href="/">Home</a>
+				<a class="nav-search" href="/search">Search</a>
+				<a class="nav-stimuli" href="/stimuli">Stimuli</a>
+				<span>(c)Sun Lee</span>
+				<span>2015</span>
 			</div>
 		</div>
-		<!-- // END MAIN LANDING PAGE \\ -->
 
-		<!-- // SEARCH PAGE \\ -->
-		<div data-role="page" id="search" class="my-section-pages" data-prev="landing" ng-controller="searchEngine">
-			<div class="container searchpage">
-				<h2>Find my:</h2><span>{{searchOptions}}</span>
-				<input type="text" ng-model="searchInput" ng-enter="showResult(searchInput)"/>
-				<div class="search-result" id="result"><p ng-bind-html="searchResult | linky:'_blank'">{{searchResult}}</p></div>
-			</div>
-		</div>
-		<!-- // END SEARCH PAGE \\ -->
-
-		<!-- // STIMULI PAGE \\ -->
-		<div data-role="page" id="stimuli" class="my-section-pages" data-prev="landing" ng-controller="stimuli">
-			<div class="container stimulipage">
-				<ul class="stimuli-list">
-					<li class="stimuli-item" ng-repeat="src in srcs"><img src="{{src.url}}" async/></li>
-					<!-- <li class="stimuli-item" ng-repeat="src in srcs" style="background-image: url({{src.url}});"></li> -->
-			</div>
-		</div>
-		<!-- // END STIMULI PAGE \\ -->
-
-		<!-- //  \\ -->
-		<div data-role="page" id="sides" class="my-section-pages" data-prev="landing">
-			<div class="container">
-				<h2>Sup</h2>
-			</div>
-		</div>
-		<!-- // END \\ -->
+		<div class="myApp-view {{pageAnimateClass}}" ng-view snap-content></div>
 
 	</body>
 
-	<script src="bower_components/jquery-mobile/jquery-1.11.1.min.js"></script>
-	<script>
-		// Bind to "mobileinit" before you load jquery.mobile.js
-		// Set the default transition to slide
-		$(document).on( "mobileinit", function() {
-			$.mobile.defaultPageTransition = "slide";
-		});	
-	</script>
-	<script src="bower_components/jquery-mobile/jquery.mobile-1.4.4.js"></script>
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
-	<script src="bower_components/packery/dist/packery.pkgd.min.js"></script>
+	<!-- <script src="/bower_components/jquery-mobile/jquery-1.11.1.min.js"></script> -->
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-route/angular-route.min.js"></script>
+	<script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="/bower_components/angular-snap/snap.min.js"></script>
+	<script src="/bower_components/angular-snap/angular-snap.min.js"></script>
+	<!-- <script src="/bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
+	<script src="/bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.min.js"></script> -->
+	<!-- <script src="/bower_components/packery/dist/packery.pkgd.min.js"></script> -->
 
-	<script src="index.js"></script>
-	<script src="app/app.js"></script>
+	<script src="/index.js"></script>
+	<script src="/app/scripts/app.js"></script>
+	<script src="/app/scripts/controllers/home.js"></script>
+	<script src="/app/scripts/controllers/search.js"></script>
+	<script src="/app/scripts/controllers/stimuli.js"></script>
 
 </html>
