@@ -170,6 +170,7 @@ a {
 	overflow-x: visible;
 }
 .my-center .my-section {
+	display: block;
 	height: 50px;
 	margin: 0.15em 0;
 	padding: 0 1.4em;
@@ -181,21 +182,22 @@ a {
 	position: relative;
 	display: inline-block;
 	top: 50%;
+	text-transform: uppercase;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-#front,
-.my-center .my-section.front {
+#search,
+.my-center .my-section.search {
 	background-color: #8000FF;
 }
-#back,
-.my-center .my-section.back {
+#stimuli,
+.my-center .my-section.stimuli {
 	background-color: #0080FF;
 }
-#projects,
-.my-center .my-section.projects {
+#sides,
+.my-center .my-section.sides {
 	background-color: #FF0080;
 }
 .my-center .my-section .title {
@@ -210,13 +212,13 @@ a {
 	-ms-border-radius: .3125em;
 	border-radius: .3125em;
 }
-.my-center .my-section.front .my-arrow {
+.my-center .my-section.search .my-arrow {
 	background-color: #80FFFF;
 }
-.my-center .my-section.back .my-arrow {
+.my-center .my-section.stimuli .my-arrow {
 	background-color: #FF80FF;
 }
-.my-center .my-section.projects .my-arrow {
+.my-center .my-section.sides .my-arrow {
 	background-color: #FFFF33;
 }
 
@@ -230,7 +232,7 @@ a {
 
 /* - end My Footer - */
 
-/* - Search Page - */
+/* - Section Pages - */
 
 .my-section-pages {
 	height: 100%;
@@ -252,13 +254,17 @@ a {
 	transform: translateY(-50%);
 }
 
-.my-section-pages .ui-input-text {
+/* - end Section Pages - */
+
+/* - Search Page - */
+
+.searchpage .ui-input-text {
 	display: block;
 	width: 90%;
 	margin: 0 auto;
 }
 
-.my-section-pages .search-result {
+.searchpage .search-result {
 	width: 90%;
 	height: 0;
 	opacity: 0;
@@ -271,12 +277,64 @@ a {
 	transition: opacity 1.5s, min-height .5s ease-in-out;
 }
 
-.my-section-pages .search-result p {
+.searchpage .search-result p {
 	padding: 0 20px;
 	overflow-wrap: break-word;
 }
 
+.searchpage .search-result p a:hover {
+	text-shadow: 0 0 4px #000;
+}
+
+.searchpage .search-result p a:active {
+	text-shadow: 0 0 20px #000;
+}
+
+.searchpage .search-result p a:visited {
+	text-shadow: none;
+}
 /* - end Search Page - */
+
+/* - Stimuli Page - */
+
+.stimulipage.container {
+	position: relative;
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.stimulipage .stimuli-list {
+	position: relative;
+	padding: 0;
+}
+
+.stimulipage .stimuli-item {
+	width: 24%;
+	height: auto;
+	list-style: none;
+	border: none;
+}
+
+.stimulipage .stimuli-item:nth-child(3n+0) {
+	width: 49%;
+}
+
+.stimulipage .stimuli-item img {
+	width: 100%;
+	height: auto;
+}
+
+
+.grid-sizer { width: 20%; }
+
+@media screen and (min-width: 720px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 10%; }
+}
+
+/* - end Stimuli Page - */
 
 /* - Shake Directive - */
 
@@ -421,6 +479,8 @@ a {
 		-moz-transition: width 0.5s, opacity 0.3s;
 		-ms-transition: width 0.5s, opacity 0.3s;
 		transition: width 0.5s, opacity 0.3s;
+		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-backface-visibility: hidden;
 	}
 	.my-center .my-section:hover {
 		width: 90%;
@@ -433,13 +493,13 @@ a {
 		-ms-transition: background-color 0.2s;
 		transition: background-color 0.2s;
 	}
-	.my-center .my-section.front:hover .my-arrow {
+	.my-center .my-section.search:hover .my-arrow {
 		background-color: #80FFFF;
 	}
-	.my-center .my-section.back:hover .my-arrow {
+	.my-center .my-section.stimuli:hover .my-arrow {
 		background-color: #FF80FF;
 	}
-	.my-center .my-section.projects:hover .my-arrow {
+	.my-center .my-section.sides:hover .my-arrow {
 		background-color: #FFFF33;
 	}
 	.my-section-pages .ui-input-text {

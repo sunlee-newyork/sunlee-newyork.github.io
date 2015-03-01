@@ -35,38 +35,27 @@
 
 				<!-- *** MAIN CONTENT *** -->
 				<div data-role="content" class="my-center">
-					<div class="my-section front" data-next="front">
-						<span class="my-title">FRONT</span>
-						<span class="my-arrow"><a href="#front" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
+					<div class="my-section search" data-next="search">
+						<span class="my-title">search</span>
+						<span class="my-arrow"><a href="#search" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
 					</div>
-					<div class="my-section back" data-next="back">
-						<span class="my-title">BACK</span>
-						<span class="my-arrow"><a href="#back" data-role="button" data-next="back" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
+					<div class="my-section stimuli" data-next="stimuli">
+						<span class="my-title">stimuli</span>
+						<span class="my-arrow"><a href="#stimuli" data-role="button" data-next="stimuli" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
 					</div>
-					<div class="my-section projects" data-next="projects">
-						<span class="my-title">PROJECTS</span>
-						<span class="my-arrow"><a href="#projects" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
+					<div class="my-section sides" data-next="sides">
+						<span class="my-title">sides</span>
+						<span class="my-arrow"><a href="#sides" data-role="button" data-icon="arrow-l" data-transition="slide"><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></a></span>
 					</div>
 				</div>
 				<!-- *** END MAIN CONTENT *** -->
-
-				<!-- *** FOOTER *** -->
-<!-- 				<div data-role="footer" class="my-footer">
-					<div class="my-contacts">
-						<a class="my-email" href="mailto:sunlee.newyork@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-						<a class="my-instagram" href="//instagram.com/foodeatyum" target="_blank"><i class="fa fa-instagram"></i></a>
-						<a class="my-linkedin" href="//www.linkedin.com/in/sunleenewyork/" target="_blank"><i class="fa fa-linkedin"></i></a>
-						<a class="my-github" href="//github.com/sunlee-newyork" target="_blank"><i class="fa fa-github-square"></i></a>
-					</div>
-				</div> -->
-				<!-- *** END FOOTER *** -->
 
 			</div>
 		</div>
 		<!-- // END MAIN LANDING PAGE \\ -->
 
 		<!-- // SEARCH PAGE \\ -->
-		<div data-role="page" id="front" class="my-section-pages" data-prev="landing" ng-controller="searchEngine">
+		<div data-role="page" id="search" class="my-section-pages" data-prev="landing" ng-controller="searchEngine">
 			<div class="container searchpage">
 				<h2>Find my:</h2><span>{{searchOptions}}</span>
 				<input type="text" ng-model="searchInput" ng-enter="showResult(searchInput)"/>
@@ -75,16 +64,18 @@
 		</div>
 		<!-- // END SEARCH PAGE \\ -->
 
-		<!-- //  \\ -->
-		<div data-role="page" id="back" class="my-section-pages" data-prev="landing">
-			<div class="container">
-				<h2>Sup</h2>
+		<!-- // STIMULI PAGE \\ -->
+		<div data-role="page" id="stimuli" class="my-section-pages" data-prev="landing" ng-controller="stimuli">
+			<div class="container stimulipage">
+				<ul class="stimuli-list">
+					<li class="stimuli-item" ng-repeat="src in srcs"><img src="{{src.url}}" async/></li>
+					<!-- <li class="stimuli-item" ng-repeat="src in srcs" style="background-image: url({{src.url}});"></li> -->
 			</div>
 		</div>
-		<!-- // END  \\ -->
+		<!-- // END STIMULI PAGE \\ -->
 
 		<!-- //  \\ -->
-		<div data-role="page" id="projects" class="my-section-pages" data-prev="landing">
+		<div data-role="page" id="sides" class="my-section-pages" data-prev="landing">
 			<div class="container">
 				<h2>Sup</h2>
 			</div>
@@ -105,6 +96,7 @@
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="bower_components/packery/dist/packery.pkgd.min.js"></script>
 
 	<script src="index.js"></script>
 	<script src="app/app.js"></script>
