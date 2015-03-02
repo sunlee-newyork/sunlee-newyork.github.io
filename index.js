@@ -1,21 +1,35 @@
-$(window).load(function() {
+// $(window).load(function() {
 
-	// jQuery Loading div that appears at the footer of page
-	// $.mobile.loading().hide();
+// 	/* - PACKERY - */
+// 	var $container = $('.stimuli-list');
+// 	console.log($container);
 
-	// Fade page into view
-	$("#landing").fadeIn(3000);		
+// 	// init
+// 	$container.packery({
+// 		containerStyle: null,
+// 		itemSelector: '.stimuli-item',
+// 		transitionDuration: '0.4s',
+// 		gutter: 10
+// 	});
 
-	$(".my-section").on('swipeleft', function () {
-		var section = '#';
-		section += $(this).data('next');
-		$.mobile.changePage(section);
-	});
+// 	// jQuery Loading div that appears at the footer of page
+// 	// $.mobile.loading().hide();
 
-	$(".my-section-pages").on('swiperight', function() {
-		var page = '#';
-		page += $(this).data('prev');
-		$.mobile.changePage(page, { reverse: true } );
-	});
+// 	// Fade page into view
+// 	// $("body").fadeIn(3000);		
 
-});
+// 	// $(".my-section").on('swipeleft', function () {
+// 	// 	var section = '#';
+// 	// 	section += $(this).data('next');
+// 	// 	$.mobile.changePage(section);
+// 	// });
+
+// 	// $(".my-section-pages").on('swiperight', function() {
+// 	// 	var page = '#';
+// 	// 	page += $(this).data('prev');
+// 	// 	$.mobile.changePage(page, { reverse: true } );
+// 	// });
+
+
+
+// });

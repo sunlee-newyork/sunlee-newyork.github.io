@@ -1,0 +1,19 @@
+<div class="snap-slider"></div>
+
+<!-- // SEARCH PAGE \\ -->
+<div class="container search">
+	<div class="navigator top-align-wrapper">
+		<a class="nav-home" href="/">home</a>
+	</div>
+	<div class="vertical-align-wrapper">
+		<h2>Find my:</h2><span>{{searchOptions}}</span>
+		<input type="text" ng-model="searchInput" ng-enter="showResult(searchInput)"/>
+		<div class="search-result" id="result"><p ng-bind-html="searchResult | linky:'_blank'">{{searchResult}}</p></div>
+	</div>
+
+	<div class="navigator bottom-align-wrapper">
+		<a class="nav-stimuli" href="/stimuli">stimuli</a>
+	</div>
+</div>
+
+<!-- // END SEARCH PAGE \\ -->
