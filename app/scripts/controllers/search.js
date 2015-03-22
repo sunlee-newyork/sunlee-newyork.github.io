@@ -26,19 +26,15 @@ angular.module('myApp')
 
 		$scope.showResult = function (input) {		
 			var found = 0;
-			var result = angular.element('#result');
+			// $scope.found = 0;
 			angular.forEach($scope.info, function (value, index) {
 				if (input == index) {
 					$scope.searchResult = value;	
 					found = 1;
-					result.css('min-height', '200px');
-					result.css('opacity', '1');
 				} 
 			});
 			if (found == 0) {
 				$scope.searchResult = "No results";
-				result.css('min-height', '200px');
-				result.css('opacity', '1');
 			}
 		}
 	}]);

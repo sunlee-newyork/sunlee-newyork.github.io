@@ -9,6 +9,20 @@ angular.module('myApp', [
 		// 'mobile-angular-ui.gestures'
 	])
 
+	.directive('ngEnter', function () {
+	    return function (scope, element, attrs) {
+	        element.bind("keydown keypress", function (event) {
+	            if (event.which === 13) {
+	                scope.$apply(function (){
+	                    scope.$eval(attrs.ngEnter);
+	                });
+
+	                event.preventDefault();
+	            }
+	        });
+	    };
+	})
+
 	.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
 		$locationProvider.html5Mode(true);
 		$routeProvider
@@ -47,17 +61,5 @@ angular.module('myApp', [
 		}
 	})
 
-	.directive('ngEnter', function () {
-	    return function (scope, element, attrs) {
-	        element.bind("keydown keypress", function (event) {
-	            if (event.which === 13) {
-	                scope.$apply(function (){
-	                    scope.$eval(attrs.ngEnter);
-	                });
 
-	                event.preventDefault();
-	            }
-	        });
-	    };
-	})
 

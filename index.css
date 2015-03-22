@@ -71,6 +71,29 @@ a {
 	color: #fff;
 }
 
+/* - ngShow - */
+
+.animate-show {
+	opacity: 1;
+	min-height: 100px;
+	-webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+/* - end ngShow - */
+
 /* - My Globals - */
 
 .myApp-nav {
@@ -109,9 +132,20 @@ a {
 
 .vertical-align-wrapper {
 	position: relative;
+	width: 100%;
+	margin: 0 auto;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 	overflow-x: visible;
+}
+
+.horizontal-align-wrapper {
+	width: 50%;
+	margin: 0 auto;
 }
 
 /* - Snap Navigation Bar - */
@@ -125,8 +159,12 @@ a {
 	width: 100%;
 	height: 180px;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	padding: 5px 0 0 5px;
+	padding: 5px 0 0;
 	font-family: 'QuicksandRegular';
 }
 
@@ -134,19 +172,17 @@ a {
 	display: block;
 	height: 60px;
 	line-height: 60px;
-	padding: 0 0 0 5px;
+	padding: 0 0 0 10px;
 }
 
-.snap-slider {
-	position: absolute;
+.snap-dragger {
+	position: fixed;
 	top: 0;
-	left: 0;
-	width: 4px;
-	height: 100%;
-	background: #fff;
-	opacity: .9;
-	z-index: 4;
-	box-shadow: 5px 0 30px #000;
+	width: 100%;
+	height: 30%;
+	line-height: 30%;
+	z-index: 5;
+	text-align: center;
 }
 
 .nav-home {
@@ -370,13 +406,13 @@ a {
 	100% { -webkit-transform: rotate(0deg); }
 }
 
-.home:hover .hat{
+.home .horizontal-align-wrapper:hover .hat{
 	-webkit-transform: rotate(-7deg);
 	-moz-transform: rotate(-7deg);
     -ms-transform: rotate(-7deg);
     transform: rotate(-7deg);
 }
-.home:hover .tie {
+.home .horizontal-align-wrapper:hover .tie {
 	-webkit-animation-name: tieAdjust;
 	-webkit-animation-duration: 0.5s;
 	-webkit-transform-origin: 50% 50%;
@@ -423,25 +459,39 @@ a {
 .search h2 {
 	margin: 0;
 	padding: 20px 0;
+	font-family: 'CodeProRegular', Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .search input {
 	display: block;
-	width: 90%;
+	width: 80%;
+	height: 50px;
 	margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.search input:focus {
+	outline: none;
 }
 
 .search .search-result {
 	width: 90%;
 	height: 0;
-	opacity: 0;
 	margin: 50px auto 0;
 	font-family: 'CodeProLight';
 	font-weight: 600;
-	-webkit-transition: opacity 1.5s, min-height .5s ease-in-out;
-	-moz-transition: opacity 1.5s, min-height .5s ease-in-out;
-	-ms-transition: opacity 1.5s, min-height .5s ease-in-out;
-	transition: opacity 1.5s, min-height .5s ease-in-out;
+	font-size: 30px;
+	-webkit-transition: height .5s ease-in-out;
+	-moz-transition: height .5s ease-in-out;
+	-ms-transition: height .5s ease-in-out;
+	transition: height .5s ease-in-out;
 }
 
 .search .search-result p {
@@ -459,6 +509,12 @@ a {
 
 .search .search-result p a:visited {
 	text-shadow: none;
+}
+
+@media screen and (min-width : 1024px) {
+	.search input {
+		width: 50%;
+	}
 }
 /* - end Search Page - */
 
