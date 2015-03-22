@@ -521,7 +521,7 @@ a {
 	.search h2 {
 		padding: 10px 0;
 	}
-	.search-result {
+	.search .search-result {
 		margin: 0 auto;
 	}
 }
