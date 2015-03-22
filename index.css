@@ -1,63 +1,7 @@
-/* - Fonts - */
-
-@font-face {
-	font-family: 'QuicksandRegular';
-	src: url('/assets/fonts/quicksand/Quicksand-Regular.otf') format('opentype');
-}
-
-@font-face {
-	font-family: 'QuicksandLight';
-	src: url('/assets/fonts/quicksand/Quicksand-Light.otf') format('opentype');
-}
-
-@font-face {
-	font-family: 'QuicksandBold';
-	src: url('/assets/fonts/quicksand/Quicksand-Bold.otf') format('opentype');
-}
-
-@font-face {
-	font-family: 'CaviarDreams';
-	src: url('/assets/fonts/caviardreams/CaviarDreams.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'CaviarDreamsBold';
-	src: url('/assets/fonts/caviardreams/CaviarDreams_Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'CodeProRegular';
-    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot');
-    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff2') format('woff2'),
-         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff') format('woff'),
-         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.ttf') format('truetype'),
-         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.svg#code_pro_demoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'CodeProLight';
-    src: url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.eot');
-    src: url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.woff2') format('woff2'),
-         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.woff') format('woff'),
-         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.ttf') format('truetype'),
-         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.svg#code_pro_light_demoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-/* - end Fonts - */
-
 html {
 	height: 100%;
 	overflow: hidden;
 }
-
 body {
 	margin: 0;
 	background-color: #333;
@@ -70,46 +14,67 @@ a {
 	text-decoration: none;
 	color: #fff;
 }
+/* - Fonts - */
+@font-face { font-family: 'QuicksandRegular'; src: url('/assets/fonts/quicksand/Quicksand-Regular.otf') format('opentype'); }
+@font-face { font-family: 'QuicksandLight'; src: url('/assets/fonts/quicksand/Quicksand-Light.otf') format('opentype'); }
+@font-face { font-family: 'QuicksandBold'; src: url('/assets/fonts/quicksand/Quicksand-Bold.otf') format('opentype'); }
+@font-face { font-family: 'CaviarDreams'; src: url('/assets/fonts/caviardreams/CaviarDreams.ttf') format('truetype'); }
+@font-face { font-family: 'CaviarDreamsBold'; src: url('/assets/fonts/caviardreams/CaviarDreams_Bold.ttf') format('truetype'); }
+@font-face {
+    font-family: 'CodeProRegular';
+    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot');
+    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff2') format('woff2'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.svg#code_pro_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CodeProLight';
+    src: url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.eot');
+    src: url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.woff2') format('woff2'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.woff') format('woff'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.ttf') format('truetype'),
+         url('/assets/fonts/codepro/light/Code_Pro_Light_Demo-webfont.svg#code_pro_light_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* - end Fonts - */
 
 /* - ngShow - */
-
 .animate-show {
 	opacity: 1;
 	min-height: 100px;
 	-webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
-
 .animate-show.ng-hide-add.ng-hide-add-active,
 .animate-show.ng-hide-remove.ng-hide-remove-active {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
-
 .animate-show.ng-hide {
   line-height: 0;
   opacity: 0;
   padding: 0 10px;
 }
-
 /* - end ngShow - */
 
 /* - My Globals - */
-
 .myApp-nav {
 	position: fixed;
 	width: 100%;
 	z-index: 1;
 }
-
 .myApp-nav ul {
 	list-style: none;
 }
-
 .myApp-nav ul li {
 	display: inline-block;
 }
-
 .myApp-view {
 	position: absolute;
 	width: 100%;
@@ -119,7 +84,6 @@ a {
 	z-index: 2;
 	box-shadow: 2px 0 30px #000;
 }
-
 .container {
 	height: 100%;
 	margin: 0 auto;
@@ -129,7 +93,12 @@ a {
 	-ms-transition: transform 1s;
 	transition: transform 1s;
 }
-
+.container.stimuli {
+	overflow: scroll;
+}
+.container.stimuli::-webkit-scrollbar {
+	width: 0;
+}
 .vertical-align-wrapper {
 	position: relative;
 	width: 100%;
@@ -142,49 +111,10 @@ a {
 	transform: translateY(-50%);
 	overflow-x: visible;
 }
-
 .horizontal-align-wrapper {
 	width: 50%;
 	margin: 0 auto;
 }
-
-/* - Snap Navigation Bar - */
-
-.snap-drawers {
-	width: 100%;
-}
-
-.snap-drawers div {
-	position: absolute;
-	width: 100%;
-	height: 180px;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	padding: 5px 0 0;
-	font-family: 'QuicksandRegular';
-}
-
-.snap-drawers div a {
-	display: block;
-	height: 60px;
-	line-height: 60px;
-	padding: 0 0 0 10px;
-}
-
-.snap-dragger {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 30%;
-	line-height: 30%;
-	z-index: 5;
-	text-align: center;
-}
-
 .nav-home {
 	background: #000;
 }
@@ -196,16 +126,13 @@ a {
 .nav-stimuli {
 	background: #0080FF;
 }
-
-/* - end Snap Navigation Bar - */
-
 .navigator {
 	position: absolute;
 	width: 100%;
 	height: 45px;
+	padding: 0;
 	z-index: 1;
 }
-
 .navigator a {
 	display: block;
 	width: 80px;
@@ -213,185 +140,65 @@ a {
 	margin: 0 auto;
 	font-family: 'QuicksandRegular';
 }
-
 .navigator.top-align-wrapper {
 	top: 0;
+	padding: 0 0 15px 0;
 }
-
+.stimuli .navigator.top-align-wrapper {
+	background-color: #0080FF;
+}
 .navigator.bottom-align-wrapper {
 	bottom: 0;
 }
-
 .navigator.bottom-align-wrapper a {
 	border-radius: 5em 5em 0 0;
 	line-height: 3.5em;
 }
-
 .navigator.top-align-wrapper a {
 	border-radius: 0 0 5em 5em;
 	line-height: 2em;
 }
-
-/* --------------------- */
-
+/* ANIMATIONS
+============================================================================= */
+/* scale up */
+@keyframes scaleDown {
+	from 		{ opacity: 0; }
+}
+@-moz-keyframes scaleDown {
+	from 		{ opacity: 0; }
+}
+@-webkit-keyframes scaleDown {
+	from 		{ opacity: 0; }
+}
+/* scale down */
+@keyframes scaleUp {
+	to 		{ opacity: 0; transform: scale(0.8); }
+}
+@-moz-keyframes scaleUp {
+	to 		{ opacity: 0; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleUp {
+	to 		{ opacity: 0; -webkit-transform: scale(0.8); }
+}
 .ng-animate.ng-enter { 
 	z-index: 8888; 
 }
 .ng-animate.ng-leave { 
 	z-index: 9999; 
 }
-
-.page-animate-home.ng-leave {
-    -webkit-animation:slideOutLeft 0.5s both ease-in;
-	-moz-animation:slideOutLeft 0.5s both ease-in;
-	animation:slideOutLeft 0.5s both ease-in;   
+.ng-leave {
+	-webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;     
 }
-.page-animate-home.ng-enter {  
-    -webkit-animation:slideInLeft 0.5s both ease-in;
-	-moz-animation:slideInLeft 0.5s both ease-in;
-	animation:slideInLeft 0.5s both ease-in;   
+.ng-enter {
+	-webkit-animation:scaleDown 0.5s both ease-in;
+	-moz-animation:scaleDown 0.5s both ease-in;
+	animation:scaleDown 0.5s both ease-in;  
 }
-
-/* about ------------------------ */
-.page-animate-search.ng-leave{
-    -webkit-animation:slideOutLeft 0.5s both ease-in;
-	-moz-animation:slideOutLeft 0.5s both ease-in;
-	animation:slideOutLeft 0.5s both ease-in;  
-}
-.page-animate-search.ng-enter {  
-    -webkit-animation:slideInRight 0.5s both ease-in;
-	-moz-animation:slideInRight 0.5s both ease-in;
-	animation:slideInRight 0.5s both ease-in;   
-}
-
-/* contact ---------------------- */
-.page-animate-stimuli.ng-leave {
-    -webkit-animation:slideOutRight 0.5s both ease-in;
-	-moz-animation:slideOutRight 0.5s both ease-in;
-	animation:slideOutRight 0.5s both ease-in;     
-}
-.page-animate-stimuli.ng-enter { 
-    -webkit-animation:slideInLeft 0.5s both ease-in;
-	-moz-animation:slideInLeft 0.5s both ease-in;
-	animation:slideInLeft 0.5s both ease-in;   
-}
-
-/* ANIMATIONS
-============================================================================= */
-
-/* rotate and fall */
-@-webkit-keyframes rotateFall {
-	0% { -webkit-transform: rotateZ(0deg); }
-	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
-	40% { -webkit-transform: rotateZ(17deg); }
-	60% { -webkit-transform: rotateZ(16deg); }
-	100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
-}
-@-moz-keyframes rotateFall {
-	0% { -moz-transform: rotateZ(0deg); }
-	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
-	40% { -moz-transform: rotateZ(17deg); }
-	60% { -moz-transform: rotateZ(16deg); }
-	100% { -moz-transform: translateY(100%) rotateZ(17deg); }
-}
-@keyframes rotateFall {
-	0% { transform: rotateZ(0deg); }
-	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
-	40% { transform: rotateZ(17deg); }
-	60% { transform: rotateZ(16deg); }
-	100% { transform: translateY(100%) rotateZ(17deg); }
-}
-
-/* scale up */
-@keyframes scaleUp {
-	from 		{ opacity: 0.3; transform: scale(0.8); }
-}
-@-moz-keyframes scaleUp {
-	from 		{ opacity: 0.3; -moz-transform: scale(0.8); }
-}
-@-webkit-keyframes scaleUp {
-	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
-}
-
-/* slide in from the right */
-@keyframes slideInRight {
-	from 	{ transform:translateX(100%); }
-	to 		{ transform: translateX(0); }
-}
-@-moz-keyframes slideInRight {
-	from 	{ -moz-transform:translateX(100%); }
-	to 		{ -moz-transform: translateX(0); }
-}
-@-webkit-keyframes slideInRight {
-	from 	{ -webkit-transform:translateX(100%); }
-	to 		{ -webkit-transform: translateX(0); }
-}
-
-/* slide in from the bottom */
-@keyframes slideInUp {
-	from 	{ transform:translateY(100%); }
-	to 		{ transform: translateY(0); }
-}
-@-moz-keyframes slideInUp {
-	from 	{ -moz-transform:translateY(100%); }
-	to 		{ -moz-transform: translateY(0); }
-}
-@-webkit-keyframes slideInUp {
-	from 	{ -webkit-transform:translateY(100%); }
-	to 		{ -webkit-transform: translateY(0); }
-}
-
-/* Slide in from the right */
-@keyframes slideInLeft {
-	from 	{ transform:translateX(100%); }
-	to 		{ transform: translateX(0); }
-}
-@-moz-keyframes slideInLeft {
-	from 	{ -moz-transform:translateX(100%); }
-	to 		{ -moz-transform: translateX(0); }
-}
-@-webkit-keyframes slideInLeft {
-	from 	{ -webkit-transform:translateX(100%); }
-	to 		{ -webkit-transform: translateX(0); }
-}
-
-/* slide out from the right */
-@keyframes slideOutLeft {
-	to 		{ transform: translateX(-100%); }
-}
-@-moz-keyframes slideOutLeft {	
-	to 		{ -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes slideOutLeft {
-	to 		{ -webkit-transform: translateX(-100%); }
-}
-
-/* slide out from the left */
-@keyframes slideOutRight {
-	to 		{ transform: translateX(100%); }
-}
-@-moz-keyframes slideOutRight {	
-	to 		{ -moz-transform: translateX(100%); }
-}
-@-webkit-keyframes slideOutRight {
-	to 		{ -webkit-transform: translateX(100%); }
-}
-
-/* rotate out newspaper */
-@-webkit-keyframes rotateOutNewspaper {
-	to { -webkit-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
-}
-@-moz-keyframes rotateOutNewspaper {
-	to { -moz-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
-}
-@keyframes rotateOutNewspaper {
-	to { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
-}
-
 /* - end My Globals - */
 
 /* - Home - */
-
 @-webkit-keyframes tieAdjust {
 	0% { -webkit-transform: rotate(5deg); }
 	10% { -webkit-transform: rotate(3deg); }
@@ -405,7 +212,6 @@ a {
 	90% { -webkit-transform: rotate(1deg); }
 	100% { -webkit-transform: rotate(0deg); }
 }
-
 .home .horizontal-align-wrapper:hover .hat{
 	-webkit-transform: rotate(-7deg);
 	-moz-transform: rotate(-7deg);
@@ -447,15 +253,43 @@ a {
 	background: url(/assets/imgs/bowtie.png) no-repeat 50% 0;
 	background-size: cover;
 }
-
+@media screen and (min-width : 1024px) {
+	.home .hat {
+		width: 165px;
+		height: 103px;
+	}
+	.home .name {
+		font-size: 4em;
+	}
+	.home .occupation {
+		font-size: 1.23em;
+	}
+	.home .tie {
+		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
+		background-size: contain;
+		width: 125px;
+		height: 125px;
+	}
+}
+/* - Shake Directive - */
+@keyframes shake {
+  0% {transform: translateX(0);}
+  12.5% {transform: translateX(-6px) rotateY(-5deg)}
+  37.5% {transform: translateX(5px) rotateY(4deg)}
+  62.5% {transform: translateX(-3px) rotateY(-2deg)}
+  87.5% {transform: translateX(2px) rotateY(1deg)}
+  100% {transform: translateX(0)}
+}
+.shake {
+  animation: shake 400ms ease-in-out;
+}
+/* - end Shake Directive - */
 /* - end Home - */
 
 /* - Search Page - */
-
 .search {
 	background: #8000FF;
 }
-
 .search h2 {
 	margin: 0;
 	padding: 20px 0;
@@ -464,23 +298,21 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
-
 .search input {
 	display: block;
 	width: 80%;
-	height: 50px;
+	height: 30px;
 	margin: 0 auto;
   font-size: 30px;
   text-align: center;
   color: #fff;
   background-color: #000;
+  border: 1px solid #fff;
   border-radius: 10px;
 }
-
 .search input:focus {
 	outline: none;
 }
-
 .search .search-result {
 	width: 90%;
 	min-height: 0;
@@ -493,249 +325,61 @@ a {
 	-ms-transition: height .5s ease-in-out;
 	transition: height .5s ease-in-out;
 }
-
 .search .search-result p {
 	padding: 0 20px;
 	overflow-wrap: break-word;
 }
-
 .search .search-result p a:hover {
 	text-shadow: 0 0 4px #000;
 }
-
 .search .search-result p a:active {
 	text-shadow: 0 0 20px #000;
 }
-
 .search .search-result p a:visited {
 	text-shadow: none;
 }
-
 @media screen and (min-width : 1024px) {
 	.search input {
 		width: 50%;
+		height: 50px;
+	}
+	.search .search-result {
+		font-size: 50px;
 	}
 }
-
-@media screen and (max-height : 350px) {
+@media only screen and (max-height : 350px) {
 	.search h2 {
 		padding: 10px 0;
 	}
 	.search .search-result {
 		margin: 0 auto;
 	}
+	.search .search-result p {
+		margin: 15px 0 !important;
+	}
 }
-
 /* - end Search Page - */
 
 /* - Stimuli Page - */
-
 .stimuli {
 	background: #0080FF;
 }
-
-
 .stimuli .stimuli-list {
 	position: relative;
 	margin: 0;
-	padding: 50px 0 0;
+	padding: 60px 20px 0;
 }
-
 .stimuli .stimuli-item {
 	float: left;
-	width: 24%;
+	width: 25%;
 	height: auto;
+	padding: 0 0 10px;
 	list-style: none;
 	border: none;
 }
-
-.stimuli .stimuli-item:nth-child(3n+0) {
-	width: 49%;
-}
-
 .stimuli .stimuli-item img {
-	width: 100%;
+	width: 95%;
 	height: auto;
+	margin: 0 auto;
 }
-
-
-.grid-sizer { width: 20%; }
-
-@media screen and (min-width: 720px) {
-  /* 10 columns for larger screens */
-  .grid-sizer { width: 10%; }
-}
-
 /* - end Stimuli Page - */
-
-/* - Shake Directive - */
-
-@keyframes shake {
-  0% {transform: translateX(0);}
-  12.5% {transform: translateX(-6px) rotateY(-5deg)}
-  37.5% {transform: translateX(5px) rotateY(4deg)}
-  62.5% {transform: translateX(-3px) rotateY(-2deg)}
-  87.5% {transform: translateX(2px) rotateY(1deg)}
-  100% {transform: translateX(0)}
-}
-
-.shake {
-  animation: shake 400ms ease-in-out;
-}
-
-/* - end Shake Directive - */
-
-/* - jQuery Mobile CSS Overrides - */
-
-.navigator {
-	padding: 0;
-}
-
-/* - end jQuery Mobile CSS Overrides - */
-
-/* - My Media Queries - */
-
-/*@media screen and (min-width: 500px), (min-height: 500px) {
-	.home .my-hat {
-		width: 175px;
-		height: 110px;
-	}
-	.home .my-name {
-		font-size: 4em;
-	}
-	.home .my-title {
-		font-size: 1.25em;
-	}
-	.home .my-contacts {
-		font-size: 1em;
-	}
-	.home .my-tie {
-		width: 57px;
-		height: 32px;
-	}
-	.navigator .nav {
-		height: 60px;
-	}
-}
-
-@media screen and (min-width: 595px), (min-height: 595px) {
-	.home {
-		margin: 2em auto;
-	}
-}
-
-@media (orientation: landscape) {
-	.container {
-		width: 100%;
-	}
-	.container,
-	.home {
-		position: absolute;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-	}
-	.home {
-		float: left;
-		width: 50%;
-		margin: 0;
-		padding: 0;
-	}
-	.navigator {
-		position: relative;
-		float: right;
-		width: 50%;
-	}
-	.navigator .nav {
-		padding: 0 1.2em;
-		border-top-left-radius: 4em;
-		border-bottom-left-radius: 4em;
-	}
-	.navigator .nav .my-arrow {
-		margin-left: 2em;
-	}
-	.my-footer {
-		display: none;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.home .my-hat {
-		width: 190px;
-		height: 120px;
-	}
-	.home .my-name {
-		font-size: 5em;
-	}
-	.home .my-title {
-		font-size: 1.6em;
-	}
-	.home .my-contacts {
-		font-size: 1.5em;
-	}
-	.navigator .nav {
-		height: 85px;
-		font-size: 2em;
-	}
-	.navigator .nav .my-arrow a {
-		-webkit-border-radius: .5em;
-		-moz-border-radius: .5em;
-		-ms-border-radius: .5em;
-		border-radius: .5em;
-	}
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-	.home .my-tie {
-		width: 50px;
-		height: 150px;
-		margin: 20px auto 0;
-		background: url(/assets/imgs/tie.png) no-repeat 50% 0;
-		background-size: cover;
-	}
-}
-
-@media (min-width: 1025px) {
-	.home-container {
-		width: 70%;
-		margin: 0 0 0 20%;
-	}
-	.navigator .nav {
-		float: right;
-		width: 80%;	
-		opacity: 0.8;
-		-webkit-transition: width 0.5s, opacity 0.3s;
-		-moz-transition: width 0.5s, opacity 0.3s;
-		-ms-transition: width 0.5s, opacity 0.3s;
-		transition: width 0.5s, opacity 0.3s;
-		-webkit-transform: translate3d(0, 0, 0);
-		-webkit-backface-visibility: hidden;
-	}
-	.navigator .nav:hover {
-		width: 90%;
-		opacity: 1;
-		cursor: pointer;
-	}
-	.navigator .nav .my-arrow {
-		-webkit-transition: background-color 0.2s;
-		-moz-transition: background-color 0.2s;
-		-ms-transition: background-color 0.2s;
-		transition: background-color 0.2s;
-	}
-	.navigator .nav.search:hover .my-arrow {
-		background-color: #80FFFF;
-	}
-	.navigator .nav.stimuli:hover .my-arrow {
-		background-color: #FF80FF;
-	}
-	.navigator .nav.sides:hover .my-arrow {
-		background-color: #FFFF33;
-	}
-	.nav-pages .ui-input-text {
-		width: 50%;
-	}
-}*/
-
-/* - end My Media Queries - 

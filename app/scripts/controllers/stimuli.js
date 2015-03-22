@@ -11,7 +11,6 @@ angular.module('myApp')
 			{url: "/assets/gifs/namesforchange.gif", name: "Names For Change"},
 			{url: "/assets/gifs/namesforchange.gif", name: "Names For Change"},
 			{url: "/assets/gifs/namesforchange.gif", name: "Names For Change"}
-			// {url: "http://www.themenectar.com/demo/salient-frostwave/", name: "Salient"}
 		]
 
 		angular.forEach($scope.srcs, function (value, index) {

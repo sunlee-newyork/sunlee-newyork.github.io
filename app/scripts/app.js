@@ -3,10 +3,7 @@
 angular.module('myApp', [
 		'ngSanitize',
 		'ngAnimate',
-		'ngRoute',
-		'snap'
-		// 'mobile-angular-ui',
-		// 'mobile-angular-ui.gestures'
+		'ngRoute'
 	])
 
 	.directive('ngEnter', function () {
@@ -49,17 +46,6 @@ angular.module('myApp', [
 				redirectTo: '/'
 			});
 	}])
-
-	.config(function(snapRemoteProvider) {
-		snapRemoteProvider.globalOptions = {
-			element: '.myApp-view',
-			disable: 'right',
-			flickThreshold: 100,
-			maxPosition: 80,
-			tapToClose: true,
-			touchToDrag: true
-		}
-	})
 
 
 

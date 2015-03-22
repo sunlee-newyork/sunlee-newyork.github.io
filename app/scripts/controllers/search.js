@@ -26,7 +26,6 @@ angular.module('myApp')
 
 		$scope.showResult = function (input) {		
 			var found = 0;
-			// $scope.found = 0;
 			angular.forEach($scope.info, function (value, index) {
 				if (input == index) {
 					$scope.searchResult = value;	
