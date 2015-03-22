@@ -483,7 +483,7 @@ a {
 
 .search .search-result {
 	width: 90%;
-	height: 0;
+	min-height: 0;
 	margin: 50px auto 0;
 	font-family: 'CodeProLight';
 	font-weight: 600;
