@@ -516,6 +516,16 @@ a {
 		width: 50%;
 	}
 }
+
+@media screen and (max-height : 350px) {
+	.search h2 {
+		padding: 10px 0;
+	}
+	.search-result {
+		margin: 0 auto;
+	}
+}
+
 /* - end Search Page - */
 
 /* - Stimuli Page - */
