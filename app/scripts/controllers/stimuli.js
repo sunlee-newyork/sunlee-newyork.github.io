@@ -9,11 +9,7 @@ angular.module('myApp')
 			{url: "/assets/gifs/charliewasasinner.gif", name: "Charlie Was A Sinner"},
 			{url: "/assets/gifs/houseofborel.gif", name: "House of Borel"},
 			{url: "/assets/gifs/forbettercoffee.gif", name: "For Better Coffee"},
-			{url: "/assets/gifs/lahautesociete.gif", name: "La Haute Societe"},
-			
-			{url: "/assets/gifs/charliewasasinner.gif", name: "Charlie Was A Sinner"},
-			{url: "/assets/gifs/namesforchange.gif", name: "Names For Change"},
-			{url: "/assets/gifs/forbettercoffee.gif", name: "For Better Coffee"},
+			{url: "/assets/gifs/lahautesociete.gif", name: "La Haute Societe"}
 		]
 
 		angular.forEach($scope.srcs, function (value, index) {
