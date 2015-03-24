@@ -1,0 +1,23 @@
+<!-- // STIMULI PAGE \\ -->
+<div class="container social">
+	<div class="navigator top-align-wrapper">
+		<a class="nav-search" href="/stimuli">search</a>
+	</div>
+	<div class="wrapper">
+		<ul class="social-list">
+			<!-- <li class="social-item" ng-repeat="src in srcs"><img src="{{src.url}}" async/></li> -->
+		</ul>
+	</div>
+</div>
+<!-- // END STIMULI PAGE \\ -->
+<script type="text/javascript">
+function callback(res) {
+			for (i=0; i<res.data.length; i++) {
+				var srcs = new Array();
+				srcs.push({url: res.data[i].images.standard_resolution.url});
+			}
+			console.log($)
+		}
+
+</script>
+<script src="https://api.instagram.com/v1/tags/foodeatyum/media/recent?access_token=311171397.1fb234f.777d31eae85e4498a188ef7ca206e1af&callback=callback"></script>

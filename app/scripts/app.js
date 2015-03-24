@@ -42,6 +42,11 @@ angular.module('myApp', [
 				controller: 'stimuliController'
 			})
 
+			.when('/social', {
+				templateUrl: '/app/views/social.html',
+				controller: 'socialController'
+			})
+
 			.otherwise({
 				redirectTo: '/'
 			});

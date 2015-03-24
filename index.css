@@ -172,13 +172,13 @@ a {
 }
 /* scale down */
 @keyframes scaleUp {
-	to 		{ opacity: 0; transform: scale(0.8); }
+	to 		{ opacity: 0; }
 }
 @-moz-keyframes scaleUp {
-	to 		{ opacity: 0; -moz-transform: scale(0.8); }
+	to 		{ opacity: 0; }
 }
 @-webkit-keyframes scaleUp {
-	to 		{ opacity: 0; -webkit-transform: scale(0.8); }
+	to 		{ opacity: 0; }
 }
 .ng-animate.ng-enter { 
 	z-index: 8888; 
@@ -253,7 +253,7 @@ a {
 	background: url(/assets/imgs/bowtie.png) no-repeat 50% 0;
 	background-size: cover;
 }
-@media screen and (min-width : 1024px) {
+@media screen and (min-width : 768px) {
 	.home .hat {
 		width: 165px;
 		height: 103px;
@@ -344,6 +344,7 @@ a {
 		height: 50px;
 	}
 	.search .search-result {
+		width: 40%;
 		font-size: 50px;
 	}
 }
@@ -366,12 +367,13 @@ a {
 }
 .stimuli .stimuli-list {
 	position: relative;
-	margin: 0;
+	width: 80%;
+	margin: 0 auto;
 	padding: 60px 20px 0;
 }
 .stimuli .stimuli-item {
 	float: left;
-	width: 25%;
+	width: 100%;
 	height: auto;
 	padding: 0 0 10px;
 	list-style: none;
@@ -381,5 +383,21 @@ a {
 	width: 95%;
 	height: auto;
 	margin: 0 auto;
+	border-radius: 30px;
+}
+@media only screen and (min-width : 600px) {
+	.stimuli .stimuli-item {
+		width: 50%;
+	}
+}
+@media only screen and (min-width : 900px) {
+	.stimuli .stimuli-item {
+		width: 33.3333333%;
+	}
+}
+@media only screen and (min-width : 1300px) {
+	.stimuli .stimuli-item {
+		width: 25%;
+	}
 }
 /* - end Stimuli Page - */
