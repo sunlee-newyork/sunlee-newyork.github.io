@@ -46,6 +46,11 @@ angular.module('myApp', [
 				templateUrl: '/app/views/social.html',
 				controller: 'socialController'
 			})
+			
+			.when('/DigitalMenuUI', {
+				templateUrl: '/app/views/menu.html',
+				controller: 'menuController'
+			})
 
 			.otherwise({
 				redirectTo: '/'
