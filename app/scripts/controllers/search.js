@@ -27,7 +27,7 @@ angular.module('myApp')
 		$scope.showResult = function (input) {		
 			var found = 0;
 			angular.forEach($scope.info, function (value, index) {
-				if (input == index) {
+				if (input.toLowerCase() == index.toLowerCase()) {
 					$scope.searchResult = value;	
 					found = 1;
 				} 
